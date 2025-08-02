@@ -559,7 +559,7 @@ export default defineComponent({
             default: 'asc'
         },
         sortIcon: {
-            type: String,
+            type: [String, Object],
             default: 'arrow-up'
         },
         sortIconSize: {
@@ -592,7 +592,7 @@ export default defineComponent({
             default: true
         },
         detailIcon: {
-            type: String,
+            type: [String, Object],
             default: 'chevron-right'
         },
         paginationPosition: {

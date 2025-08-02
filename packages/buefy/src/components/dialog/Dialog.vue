@@ -115,7 +115,7 @@ const Dialog = defineComponent({
     props: {
         title: String,
         message: [String, Array],
-        icon: String,
+        icon: [String, Object],
         iconPack: String,
         hasIcon: Boolean,
         type: {

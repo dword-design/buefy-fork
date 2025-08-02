@@ -26,7 +26,7 @@ const FormElementMixin = defineComponent({
         expanded: Boolean,
         loading: Boolean,
         rounded: Boolean,
-        icon: String,
+        icon: [String, Object],
         iconPack: String,
         maxlength: [Number, String],
         useHtml5Validation: {

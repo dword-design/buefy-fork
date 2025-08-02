@@ -15,7 +15,7 @@ export default defineComponent({
         type: String,
         hasIcon: Boolean,
         size: String,
-        icon: String,
+        icon: [String, Object],
         iconPack: String,
         iconSize: String,
         autoClose: {

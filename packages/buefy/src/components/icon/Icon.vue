@@ -28,7 +28,7 @@ export default defineComponent({
         component: String,
         pack: String,
         icon: {
-            type: String,
+            type: [String, Object],
             required: true
         },
         size: String,
@@ -53,7 +53,10 @@ export default defineComponent({
         * internal icons are always MDI.
         */
         newIcon() {
-            return `${this.iconPrefix}${this.getEquivalentIconOf(this.icon)}`
+            if (typeof this.icon === 'string') {
+                return `${this.iconPrefix}${this.getEquivalentIconOf(this.icon)}`
+            }
+            return this.icon
         },
         newPack() {
             return this.pack || config.defaultIconPack
