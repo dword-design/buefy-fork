@@ -162,13 +162,13 @@ export default defineComponent({
         iconPack: String,
         iconSize: String,
         iconPrev: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultIconPrev
             }
         },
         iconNext: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultIconNext
             }

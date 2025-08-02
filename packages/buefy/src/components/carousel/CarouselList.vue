@@ -63,7 +63,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import type { PropType } from 'vue'
+import type { PropType, Component } from 'vue'
 
 import { sign, mod, bound } from '../../utils/helpers'
 import config from '../../utils/config'
@@ -87,8 +87,8 @@ export interface BreakpointSettings {
     itemsToList: number
     iconPack?: string
     iconSize?: string
-    iconPrev: string
-    iconNext: string
+    iconPrev: string | Component
+    iconNext: string | Component
 }
 
 export type BreakpointOptions = Partial<BreakpointSettings>
@@ -139,13 +139,13 @@ export default defineComponent({
         iconPack: String,
         iconSize: String,
         iconPrev: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultIconPrev
             }
         },
         iconNext: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultIconNext
             }

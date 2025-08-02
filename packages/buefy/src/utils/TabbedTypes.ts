@@ -1,6 +1,6 @@
 // Common types between `TabbedMixin` and `TabbedChildMixin`.
 
-import type { Slots } from 'vue'
+import type { Slots, Component } from 'vue'
 import type { VueClassAttribute } from './config'
 import type { InjectedChild, ProviderParent } from './ProvideInjectTypes'
 
@@ -11,7 +11,7 @@ export interface TabbedChild extends InjectedChild {
     isActive: boolean
     label?: string
     headerClass: VueClassAttribute
-    icon?: string
+    icon?: string | Component
     iconPack?: string
     $slots: Slots
 

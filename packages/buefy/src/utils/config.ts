@@ -101,12 +101,12 @@ export interface BuefyConfig {
      * Default icon for previous buttons.
      * "chevron-left" by default.
      */
-    defaultIconPrev: string,
+    defaultIconPrev: string | Component,
     /*
      * Default icon for next buttons.
      * "chevron-right" by default.
      */
-    defaultIconNext: string,
+    defaultIconNext: string | Component,
     /*
      * Default locale.
      * Default locale of the browser by default.
