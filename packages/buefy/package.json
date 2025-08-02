@@ -1,6 +1,6 @@
 {
-  "name": "buefy",
-  "version": "1.0.2",
+  "name": "@dword-design/buefy-fork",
+  "version": "1.0.0",
   "description": "Lightweight UI components for Vue.js (v3) based on Bulma",
   "keywords": [
     "vuejs",
