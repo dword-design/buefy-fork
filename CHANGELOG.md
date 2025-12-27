@@ -1,5 +1,114 @@
 # Buefy Changelog
 
+## [3.0.3](https://github.com/buefy/buefy/pull/4256)
+
+
+### Fixes
+
+* [#4228](https://github.com/buefy/buefy/pull/4228) Fixed dropdown style inconsistencies.
+* [#4253](https://github.com/buefy/buefy/pull/4253) Added `use[Component]()` functions and improved documentation (@ElteHupkes).
+* [#4254](https://github.com/buefy/buefy/pull/4254) Updated ad components to match Buefy theme.
+
+### Fixes (docs)
+
+* [#4254](https://github.com/buefy/buefy/pull/4254) Fixed CarbonAds code and themed it around buefy's theme.
+* [#4255](https://github.com/buefy/buefy/pull/4255) Fixed broken dev script in documentation - `npm run dev` stopped working.
+
+### Chores (docs)
+
+* [#4249](https://github.com/buefy/buefy/pull/4249) Bumped `vite` from 6.3.5 to 6.3.6.
+
+## [3.0.2](https://github.com/buefy/buefy/pull/4243)
+
+### Fixes
+
+* [#4238](https://github.com/buefy/buefy/pull/4238) Updated navbar icon colors and fixed NavBurger rendering.
+* [#4229](https://github.com/buefy/buefy/pull/4229) Bubble up mouse events from `b-table` rows for better interactivity (@kikuomax).
+* [#4236](https://github.com/buefy/buefy/pull/4236) Augmented `Using Vue` docs and examples for clarity (@ElteHupkes).
+* [#4235](https://github.com/buefy/buefy/pull/4235) Extended Buefy CSS output to include built versions for CDN and static use.
+* [#4237](https://github.com/buefy/buefy/pull/4237) Updated internal CSS path references for consistency.
+
+### Fixes (docs)
+
+* [#4227](https://github.com/buefy/buefy/pull/4227) Updated StackBlitz integration to reflect latest component usage and styling.
+
+## [3.0.1](https://github.com/buefy/buefy/pull/4224)
+
+### Fixes
+
+* [#4211](https://github.com/buefy/buefy/pull/4211) Restored autocomplete arrow key hover styles.
+* [#4205](https://github.com/buefy/buefy/pull/4205) Removed old modal style for closing "x" (now fixed in Bulma v1).
+* [#4204](https://github.com/buefy/buefy/pull/4204) Added missing span to NavBurger.
+* [#4210](https://github.com/buefy/buefy/pull/4210) chore(lib): use `@forward` in Buefy main Sass file to allow custom Sass variables.
+
+### Fixes (docs)
+
+* [#4202](https://github.com/buefy/buefy/pull/4202) Updated the Buefy footer.
+
+## [3.0.0](https://github.com/buefy/buefy/pull/4199)
+
+### Breaking Changes
+
+* Migrated entire codebase to **Bulma v1.0.3** for modernized styling and layout.
+* Deprecated Sass global built-in functions; replaced with modern equivalents.
+* Removed legacy `bulmacssvars` and outdated style references.
+* Replaced all `value` props with `modelValue` across components to align with Vue 3 standards.
+* Programmatically mounted components (e.g., `Modal`, `Dialog`, `Snackbar`) now require standalone Vue apps and cannot use plugins.
+* `StepItem`, `CarouselItem`, and `TabItem` now require explicit `order` props to maintain consistent rendering order.
+
+### New Features
+
+* Introduced a **new color system** for Buefy v3 documentation and component theming.
+* Added support for **Cleave.js** as a directive for input formatting.
+* Updated all style variables and documentation to reflect Bulma v1 conventions.
+
+### Fixes
+
+* Resolved SCSS issues in `Dropdown`, `Navbar`, and `Input` loading states.
+* Fixed deprecated Sass usage and lint/type check errors across the codebase.
+* Updated unit tests to reflect new architecture and styling.
+
+### Fixes (docs)
+
+* Updated documentation for Sass and CSS variable usage.
+* Refreshed component style variable references and examples.
+* Migrated interactive examples to StackBlitz and updated Netlify deploy previews.
+
+### Others
+
+* Merged 28 commits for Bulma v1 migration and v3 release.
+* Bumped version to `v3.0.0` and updated changelog accordingly.
+* Cleaned up dev dependencies and workflows for modern build tools.
+
+## [1.0.2](https://github.com/buefy/buefy/pull/4174)
+
+### Fixes
+
+* [#4139](https://github.com/buefy/buefy/pull/4139) Fixed various bugs in the `Autocomplete` component.
+* [#4189](https://github.com/buefy/buefy/pull/4189) Fixed `Clockpicker` not closing properly and removed the `autoSwitch` prop.
+* [#4156](https://github.com/buefy/buefy/pull/4156) Exported `SnackbarOpenParams` type for better TypeScript support.
+* [#4176](https://github.com/buefy/buefy/pull/4176) Fixed issues in the `ImproveThis` component.
+* Removed deprecated high contrast styles and references.
+* Removed accidental dependencies and cleaned up unused references to `buefy-next`.
+
+### Fixes (docs)
+
+* [#4142](https://github.com/buefy/buefy/pull/4142) Updated documentation for Vue 3 components.
+* [#4193](https://github.com/buefy/buefy/pull/4193) Cleaned up README content and formatting.
+* Updated social and Discord links across documentation.
+* Migrated interactive examples from CodePen to StackBlitz.
+
+### Others
+
+* [#4173](https://github.com/buefy/buefy/pull/4173) Version bump: package.json version set to 1.0.2
+* [#4197](https://github.com/buefy/buefy/pull/4197) Update Changelog for version 1.0.2
+* [#4184](https://github.com/buefy/buefy/pull/4184) Added `bulma` as a direct dependency of Buefy.
+* [#4192](https://github.com/buefy/buefy/pull/4192) Cleaned up StackBlitz integration and dev dependencies.
+* [#4196](https://github.com/buefy/buefy/pull/4196) Implemented Carbon Ads integration.
+* Updated workflows and access levels for dev packages.
+* Added reference to `ClockpickerFace` component.
+* Added Buefy Collective metadata for community support.
+
 ## [1.0.1](https://github.com/buefy/buefy/pull/4077)
 
 ### Breaking changes
