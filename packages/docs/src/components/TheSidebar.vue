@@ -4,6 +4,11 @@
             <sidebar-search />
             <template v-for="items in data" :key="items.category">
                 <p class="sidebar-label">
+                    <b-icon
+                        v-if="items.categoryIcon"
+                        pack="fa"
+                        :icon="items.categoryIcon"
+                    />
                     {{ items.category }}
                 </p>
                 <ul>
@@ -55,7 +60,7 @@
                 </ul>
             </template>
         </div>
-
+        <sidebar-ads />
         <a
             class="sidebar-btt"
             role="button"
@@ -76,6 +81,7 @@ import type { PageTree } from '@/data/menu'
 import routes from '@/data/routes'
 import type { Route } from '@/data/routes'
 import SidebarSearch from './SidebarSearch.vue'
+import SidebarAds from './SideBarAds.vue'
 
 type PageRoute = Partial<PageTree & Route>;
 
@@ -83,7 +89,8 @@ export default defineComponent({
     components: {
         BIcon,
         BTag,
-        SidebarSearch
+        SidebarSearch,
+        SidebarAds
     },
     props: {
         data: Array<PageTree>
