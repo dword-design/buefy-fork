@@ -2,20 +2,30 @@
     "documentation": [
         {
             "category": "Installation",
+            "categoryIcon": "download",
             "pages": [
                 "documentation/start",
-                "documentation/customization",
+                {
+                    "category": "Customization",
+                    "categoryIcon": "sliders-h",
+                    "pages": [
+                        "documentation/sass",
+                        "documentation/css-variables"
+                    ]
+                },
                 "documentation/constructor-options"
             ]
         },
         {
             "category": "Layout",
+            "categoryIcon": "th-large",
             "pages": [
                 "documentation/layout"
             ]
         },
         {
             "category": "UI components",
+            "categoryIcon": "puzzle-piece",
             "pages": [
                 "documentation/breadcrumb",
                 "documentation/button",
@@ -84,12 +94,6 @@
             "category": "Drag & drop",
             "pages": [
                 "extensions/sortablejs"
-            ]
-        },
-        {
-            "category": "CSS Variables",
-            "pages": [
-                "extensions/bulmacssvars"
             ]
         },
         {
