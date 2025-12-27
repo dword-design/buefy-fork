@@ -1,5 +1,5 @@
-import { ref } from 'vue'
-import type { App, Ref } from 'vue'
+import { ref, inject } from 'vue'
+import type { App, Ref, InjectionKey } from 'vue'
 
 import Modal from './Modal.vue'
 import ModalOrchestrator from './ModalOrchestrator.vue'
@@ -23,22 +23,21 @@ class ModalProgrammatic {
             }
         }
 
-        let slot: ModalOpenParams['content']
-        if (Array.isArray(params.content)) {
-            slot = params.content
-            delete params.content
-        }
-        const propsData = params
-
-        this.modals.value.push(propsData)
+        this.modals.value.push(params)
     }
+}
+
+const modalInjectionKey = Symbol('Buefy Modal') as InjectionKey<ModalProgrammatic>
+
+export function useModal() {
+    return inject(modalInjectionKey)!
 }
 
 const Plugin = {
     install(Vue: App) {
         registerComponent(Vue, Modal)
         registerComponent(Vue, ModalOrchestrator)
-        registerComponentProgrammatic(Vue, 'modal', new ModalProgrammatic(Vue))
+        registerComponentProgrammatic(Vue, 'modal', new ModalProgrammatic(Vue), modalInjectionKey)
     }
 }
 

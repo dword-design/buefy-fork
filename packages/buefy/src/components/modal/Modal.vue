@@ -39,15 +39,14 @@
                     :can-cancel="canCancel"
                     :close="close"
                 />
-                <button
-                    type="button"
-                    v-if="showX"
-                    v-show="!animating"
-                    class="modal-close is-large"
-                    :aria-label="closeButtonAriaLabel"
-                    @click="cancel('x')"
-                />
             </div>
+            <button
+                v-if="showX"
+                v-show="!animating"
+                class="modal-close is-large"
+                :aria-label="closeButtonAriaLabel"
+                @click="cancel('x')"
+            />
         </div>
     </transition>
 </template>
@@ -57,7 +56,6 @@ import { defineComponent } from 'vue'
 import type { PropType, VNode } from 'vue'
 
 import trapFocus from '../../directives/trapFocus'
-import { removeElement } from '../../utils/helpers'
 import type { ExtractComponentProps } from '../../utils/helpers'
 import config from '../../utils/config'
 import type { ModalCancellableOption } from '../../utils/config'
@@ -144,7 +142,10 @@ const Modal = defineComponent({
                 return Boolean(value)
             }
         },
-        closeButtonAriaLabel: String,
+        closeButtonAriaLabel: {
+            type: String,
+            default: 'close'
+        },
         destroyOnHide: {
             type: Boolean,
             default: true

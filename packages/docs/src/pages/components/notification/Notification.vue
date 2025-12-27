@@ -23,13 +23,13 @@
             </div>
         </Example>
 
-         <Example title="From outside Vue instance">
-            <p>You can use it on Vuex or VueRouter using this syntax:</p>
-            <CodeView lang="javascript" :code="preformat(outsideVueInstance)" expanded/>
+        <Example :component="ExCompositionApi" :code="ExCompositionApiCode" title="Composition API">
+            When using the Composition API, you can access the current Notification instance
+            with <code>useNotification()</code>:
         </Example>
 
         <ApiView :data="api"/>
-        <VariablesView :data="variables"/>
+        <VariablesView :data="variables" link="https://bulma.io/documentation/elements/notification/#sass-and-css-variables"/>
     </div>
 </template>
 
@@ -63,7 +63,8 @@
     import ExProgrammatically from './examples/ExProgrammatically.vue'
     import ExProgrammaticallyCode from './examples/ExProgrammatically.vue?raw'
 
-    import outsideVueInstance from './outside-vue-instance.js?raw'
+    import ExCompositionApi from './examples/ExCompositionApi.vue'
+    import ExCompositionApiCode from './examples/ExCompositionApi.vue?raw'
 
     export default defineComponent({
         components: {
@@ -82,6 +83,7 @@
                     ExIcons,
                     ExAutoClose,
                     ExAutoCloseWithProgressBar,
+                    ExCompositionApi,
                     ExProgrammatically
                 }),
                 ExSimpleCode,
@@ -90,7 +92,7 @@
                 ExAutoCloseCode,
                 ExAutoCloseWithProgressBarCode,
                 ExProgrammaticallyCode,
-                outsideVueInstance
+                ExCompositionApiCode,
             }
         },
         methods: {
