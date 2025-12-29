@@ -11,7 +11,11 @@
                 :type="iconType"
                 :pack="iconPack"
             />
-            <span :class="{ 'has-ellipsis': ellipsis }" @click="click">
+            <span
+                v-if="$slots.default"
+                :class="{ 'has-ellipsis': ellipsis }"
+                @click="click"
+            >
                 <slot />
             </span>
         </span>
@@ -50,7 +54,11 @@
             :type="iconType"
             :pack="iconPack"
         />
-        <span :class="{ 'has-ellipsis': ellipsis }" @click="click">
+        <span
+            v-if="$slots.default"
+            :class="{ 'has-ellipsis': ellipsis }"
+            @click="click"
+        >
             <slot />
         </span>
 
