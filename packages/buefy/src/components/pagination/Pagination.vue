@@ -156,13 +156,13 @@ export default defineComponent({
         order: String,
         iconPack: String,
         iconPrev: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultIconPrev
             }
         },
         iconNext: {
-            type: String,
+            type: [String, Object],
             default: () => {
                 return config.defaultIconNext
             }

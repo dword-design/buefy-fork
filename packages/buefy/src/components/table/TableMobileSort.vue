@@ -113,7 +113,7 @@ export default defineComponent({
         placeholder: String,
         iconPack: String,
         sortIcon: {
-            type: String,
+            type: [String, Object],
             default: 'arrow-up'
         },
         sortIconSize: {

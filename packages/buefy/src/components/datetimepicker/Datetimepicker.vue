@@ -148,8 +148,8 @@ export default defineComponent({
             type: Number,
             default: () => 4
         },
-        icon: String,
-        iconRight: String,
+        icon: [String, Object],
+        iconRight: [String, Object],
         iconRightClickable: Boolean,
         iconPack: String,
         inline: Boolean,

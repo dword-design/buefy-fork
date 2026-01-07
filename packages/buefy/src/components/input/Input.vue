@@ -134,7 +134,7 @@ export default defineComponent({
             type: String,
             default: ''
         },
-        iconRight: String,
+        iconRight: [String, Object],
         iconRightClickable: Boolean,
         iconRightType: String,
         // Native options to use in HTML5 validation

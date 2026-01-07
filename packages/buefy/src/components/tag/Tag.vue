@@ -11,7 +11,11 @@
                 :type="iconType"
                 :pack="iconPack"
             />
-            <span :class="{ 'has-ellipsis': ellipsis }" @click="click">
+            <span
+                v-if="$slots.default"
+                :class="{ 'has-ellipsis': ellipsis }"
+                @click="click"
+            >
                 <slot />
             </span>
         </span>
@@ -50,7 +54,11 @@
             :type="iconType"
             :pack="iconPack"
         />
-        <span :class="{ 'has-ellipsis': ellipsis }" @click="click">
+        <span
+            v-if="$slots.default"
+            :class="{ 'has-ellipsis': ellipsis }"
+            @click="click"
+        >
             <slot />
         </span>
 
@@ -88,11 +96,11 @@ export default defineComponent({
             default: true
         },
         ariaCloseLabel: String,
-        icon: String,
+        icon: [String, Object],
         iconType: String,
         iconPack: String,
         closeType: String,
-        closeIcon: String,
+        closeIcon: [String, Object],
         closeIconPack: String,
         closeIconType: String
     },

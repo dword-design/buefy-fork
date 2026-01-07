@@ -11,7 +11,7 @@ export default <Parent extends TabbedParent = TabbedParent>(parentCmp: string) =
     mixins: [InjectedChildMixin<typeof Sorted, Parent>(parentCmp, Sorted)],
     props: {
         label: String,
-        icon: String,
+        icon: [String, Object],
         iconPack: String,
         visible: {
             type: Boolean,

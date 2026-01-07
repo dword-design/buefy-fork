@@ -58,7 +58,7 @@ const Rate = defineComponent({
             default: 5
         },
         icon: {
-            type: String,
+            type: [String, Object],
             default: 'star'
         },
         iconPack: String,
