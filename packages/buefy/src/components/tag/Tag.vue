@@ -88,11 +88,11 @@ export default defineComponent({
             default: true
         },
         ariaCloseLabel: String,
-        icon: String,
+        icon: [String, Object],
         iconType: String,
         iconPack: String,
         closeType: String,
-        closeIcon: String,
+        closeIcon: [String, Object],
         closeIconPack: String,
         closeIconType: String
     },

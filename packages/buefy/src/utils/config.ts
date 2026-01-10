@@ -1,4 +1,4 @@
-import type { App } from 'vue'
+import type { App, Component } from 'vue'
 
 import Color from './color'
 
@@ -96,17 +96,17 @@ export interface BuefyConfig {
      * Default component that renders icons.
      * `<i>` by default.
      */
-    defaultIconComponent?: string | null,
+    defaultIconComponent?: string | Component | null,
     /*
      * Default icon for previous buttons.
      * "chevron-left" by default.
      */
-    defaultIconPrev: string,
+    defaultIconPrev: string | Component,
     /*
      * Default icon for next buttons.
      * "chevron-right" by default.
      */
-    defaultIconNext: string,
+    defaultIconNext: string | Component,
     /*
      * Default locale.
      * Default locale of the browser by default.

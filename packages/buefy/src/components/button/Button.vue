@@ -61,8 +61,8 @@ export default defineComponent({
         size: String,
         label: String,
         iconPack: String,
-        iconLeft: String,
-        iconRight: String,
+        iconLeft: [String, Object],
+        iconRight: [String, Object],
         rounded: {
             type: Boolean,
             default: () => {

@@ -67,7 +67,7 @@ export default defineComponent({
         expanded: Boolean,
         disabled: Boolean,
         iconPack: String,
-        icon: String,
+        icon: [String, Object],
         animation: {
             type: String,
             default: 'slide'

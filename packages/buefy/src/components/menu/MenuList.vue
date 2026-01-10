@@ -32,7 +32,7 @@ export default defineComponent({
     },
     props: {
         label: String,
-        icon: String,
+        icon: [String, Object],
         iconPack: String,
         ariaRole: {
             type: String,

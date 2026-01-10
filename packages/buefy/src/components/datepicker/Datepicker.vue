@@ -409,7 +409,7 @@ export default defineComponent({
             default: () => config.defaultDatepickerMobileNative
         },
         position: String,
-        iconRight: String,
+        iconRight: [String, Object],
         iconRightClickable: Boolean,
         events: Array<Date | DatepickerEvent>,
         indicators: {
@@ -418,11 +418,11 @@ export default defineComponent({
         },
         openOnFocus: Boolean,
         iconPrev: {
-            type: String,
+            type: [String, Object],
             default: () => config.defaultIconPrev
         },
         iconNext: {
-            type: String,
+            type: [String, Object],
             default: () => config.defaultIconNext
         },
         yearsRange: {
