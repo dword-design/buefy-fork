@@ -20,7 +20,7 @@
   ],
   "homepage": "https://buefy.org",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
+  "main": "dist/buefy.esm.js",
   "module": "dist/buefy.esm.js",
   "unpkg": "dist/buefy.min.js",
   "typings": "dist/buefy.d.ts",
